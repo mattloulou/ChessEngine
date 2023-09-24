@@ -8,6 +8,13 @@ void DisplayObserver::notify()
     BoardState state = gameBoard->getState();
     showBoard(state.grid); // print the updated board
 
+    // print which player's turn it is
+    if (state.playerTurn == Player::White) {
+        std::cout << "White's Turn:" << std::endl;
+    } else {
+        std::cout << "Black's Turn:" << std::endl;
+    }
+
     // display win, draw, or check, if needed
     if (state.whiteHasWin) {
         showWin(Player::White);
