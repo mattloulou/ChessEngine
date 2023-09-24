@@ -1,0 +1,8 @@
+.vscode/
+
+# files from compilation
+*.o
+*.d
+chess
+fastestStalemate.txt
+lastGame.txt
